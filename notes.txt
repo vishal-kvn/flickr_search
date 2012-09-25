@@ -1,0 +1,67 @@
+// error response
+jQuery16104061110643669963_1348531783333({"stat":"fail", "code":100, "message":"Invalid API Key (Key has expired)"})
+
+// http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=0a0e5b75b5dc0b7f8f0845cdad43a4da&text=backbone+js&per_page=2&page=1&extras=url_m&format=json
+// http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=0a0e5b75b5dc0b7f8f0845cdad43a4da&text=lebron&per_page=9&page=1&extras=url_n&format=json
+
+<img id="liquid-photo" alt="photo" aria-describedby="title_div" width="612" height="612" class="centered" src="http://farm9.staticflickr.com/8439/7981337718_39d6c42b59_z.jpg" style="visibility: visible; ">
+
+Search query
+
+http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=0a0e5b75b5dc0b7f8f0845cdad43a4da&text=backbone+js&per_page=2&page=1&format=rest
+
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+  <photos page="1" pages="38" perpage="2" total="75">
+    <photo id="7981337718" owner="51616741@N00" secret="39d6c42b59" server="8439" farm="9" title="The @airbrake team at @airbnb HQ for #backbone.js talk." ispublic="1" isfriend="0" isfamily="0" />
+    <photo id="7884506628" owner="65312244@N05" secret="047a7b3db0" server="8459" farm="9" title="ABC Radio Gateway" ispublic="1" isfriend="0" isfamily="0" />
+  </photos>
+</rsp>
+
+
+http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+
+http://farm9.staticflickr.com/8439/7981337718_39d6c42b59.jpg
+
+http://farm9.staticflickr.com/8459/7884506628_047a7b3db0.jpg
+
+Get photo info
+
+http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0a0e5b75b5dc0b7f8f0845cdad43a4da&photo_id=7981337718&format=rest
+
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+  <photo id="7981337718" secret="39d6c42b59" server="8439" farm="9" dateuploaded="1347502299" isfavorite="0" license="1" safety_level="0" rotation="0" originalsecret="738a58a326" originalformat="jpg" views="4" media="photo">
+    <owner nsid="51616741@N00" username="benarent" realname="Ben Arent" location="London, West Sussex" iconserver="1196" iconfarm="2" />
+    <title>The @airbrake team at @airbnb HQ for #backbone.js talk.</title>
+    <description />
+    <visibility ispublic="1" isfriend="0" isfamily="0" />
+    <dates posted="1347502299" taken="2012-09-13 03:11:39" takengranularity="0" lastupdate="1347502305" />
+    <editability cancomment="1" canaddmeta="0" />
+    <publiceditability cancomment="1" canaddmeta="0" />
+    <usage candownload="1" canblog="1" canprint="0" canshare="1" />
+    <comments>0</comments>
+    <notes />
+    <people haspeople="0" />
+    <tags>
+      <tag id="4633544-7981337718-60504812" author="51616741@N00" raw="instagram app" machine_tag="0">instagramapp</tag>
+      <tag id="4633544-7981337718-1628" author="51616741@N00" raw="square" machine_tag="0">square</tag>
+      <tag id="4633544-7981337718-14976" author="51616741@N00" raw="square format" machine_tag="0">squareformat</tag>
+      <tag id="4633544-7981337718-34115330" author="51616741@N00" raw="iphoneography" machine_tag="0">iphoneography</tag>
+      <tag id="4633544-7981337718-60643605" author="51616741@N00" raw="uploaded:by=instagram" machine_tag="1">uploaded:by=instagram</tag>
+      <tag id="4633544-7981337718-21994" author="51616741@N00" raw="Hudson" machine_tag="0">hudson</tag>
+      <tag id="4633544-7981337718-71469805" author="51616741@N00" raw="foursquare:venue=4de17394c65b7a3e21031401" machine_tag="1">foursquare:venue=4de17394c65b7a3e21031401</tag>
+    </tags>
+    <location latitude="37.76892" longitude="-122.402445" accuracy="16" context="0" place_id="fNozyi9UV7Nh15.egQ" woeid="55970968">
+      <neighbourhood place_id="fNozyi9UV7Nh15.egQ" woeid="55970968">Potrero Flats</neighbourhood>
+      <locality place_id="7.MJR8tTVrIO1EgB" woeid="2487956">San Francisco</locality>
+      <county place_id=".7sOmlRQUL9nK.kMzA" woeid="12587707">San Francisco</county>
+      <region place_id="NsbUWfBTUb4mbyVu" woeid="2347563">California</region>
+      <country place_id="nz.gsghTUb4c2WAecA" woeid="23424977">United States</country>
+    </location>
+    <geoperms ispublic="1" iscontact="0" isfriend="0" isfamily="0" />
+    <urls>
+      <url type="photopage">http://www.flickr.com/photos/benarent/7981337718/</url>
+    </urls>
+  </photo>
+</rsp>
