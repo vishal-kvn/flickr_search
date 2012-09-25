@@ -9,6 +9,16 @@ $(document).ready( function(){
         e.preventDefault();
 
         var id = $("#dialog");
+        var image_url = $(this).attr("src");
+        console.log(image_url);
+
+        var markup = "<div><img src=" + image_url + " /></div>"
+        console.log(markup);
+
+        $.template( "photoTemplate", markup );
+
+        $( "#popup-photo" ).empty();
+        $.tmpl( "photoTemplate", image_url ).appendTo( "#popup-photo" );
 
         //Get the screen height and width
         var maskHeight = $(document).height();
@@ -80,6 +90,7 @@ $(document).ready( function(){
 		});
     }
 
+    // prevent loading from firing twice
     $(window).scroll($.debounce(50 , function(){
 
     		if  ($(window).scrollTop() == $(document).height() - $(window).height()){
